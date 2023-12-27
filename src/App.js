@@ -8,6 +8,7 @@ import Ran from "./Component/component2";
 import Sunn from "./Component/Clock";
 // import Dash from "./Pages/Dashboard";
 import PrivateRote from "./Component/Privateroute";
+import Test from "./Component/Tests";
 import Signup from "./Component/Sign";
 import Login from "./Component/Login";
 import Userdetail from "./Component/userdetail";
@@ -29,16 +30,14 @@ function App() {
     
         <Routes>
           <Route path="/" element={<Newpage />} />
-          <Route  path="/about" element={<Ran/>} />
+          <Route  path="/about" element={<Test/>} />
           <Route  path="/contact"  element={<Sunn/>}/>
           <Route  path="/signup"  element={<Signup/>}/>
-          <Route  path="/userdetail"  element={<Userdetail/>}/>
           <Route  path="/login"  element={<Login  />}/>
-          {/* <Route  path="dash" element={
-            <PrivateRote random={ram}>
-              <Dash/>
-            </PrivateRote>
-          } /> */}
+          <Route  path="/userdetail"  element={<Userdetail/>}/>
+
+
+       
         </Routes>
     
       <Foot />

@@ -31,7 +31,9 @@ const Navbar = () => {
             <li>
               <Link to="/userdetail">Userdetail</Link>
             </li>
-        
+            <li>
+            <Link to="/dash">Dashboard</Link>
+            </li>
             <Link to="/login"><button className="header-button" >Log in</button></Link>
           {/* {butt ?
           <button className="header-button" onClick={logout}>user out </button>
