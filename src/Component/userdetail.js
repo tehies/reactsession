@@ -20,8 +20,6 @@ const Userdetail = () => {
   const [count, setCount] = useState([]);
   const [data, setData] = useState(false);
 
-
-
   useEffect(() => {
     axios.get(`https://jsonplaceholder.typicode.com/users`).then((response) => {
       console.log(response);

@@ -23,10 +23,8 @@ const Signup =()=>{
     const adddata = (e) => {
         e.preventDefault();
         localStorage.setItem("lastname", JSON.stringify([...data, formData]));
-        
-        if(test){
-            alert();
-        }
+        history('/login');
+    
     }
 
 
@@ -51,6 +49,8 @@ Enter Your Password
 <div className="random_button">
 <button onClick={adddata}>Register Now</button>
 <Link to="/login">Already User</Link>
+
+
 </div>
 </form>
 </div>

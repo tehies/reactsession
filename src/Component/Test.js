@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -14,7 +15,7 @@ const Demoss = () =>{
 
   const  handlesubmit = (e) =>{
     e.preventDefault()
-    axios.post('https://jsonplaceholder.typicode.com/users', frd).then((response) => {
+    axios.post('https://jsonplaceholder.typicode.com/users', indata).then((response) => {
      console.log(response);
       });
   }

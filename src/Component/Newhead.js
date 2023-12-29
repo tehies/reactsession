@@ -34,12 +34,10 @@ const Navbar = () => {
             <li>
             <Link to="/dash">Dashboard</Link>
             </li>
+            <li>
+            <Link to="/create">Create</Link>
+            </li>
             <Link to="/login"><button className="header-button" >Log in</button></Link>
-          {/* {butt ?
-          <button className="header-button" onClick={logout}>user out </button>
-            :  
-          <button className="header-button" onClick={login}> user in</button>
-           } */}
           </ul>
         </div>
       </div>
