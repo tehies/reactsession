@@ -6,25 +6,17 @@ import Foot from "./Component/Footer";
 import Newpage from "./Component/Firstpage";
 import Create from "./Pages/Dashboard";
 import Sunn from "./Component/Clock";
-// import Dash from "./Pages/Dashboard";
-// import PrivateRote from "./Component/Privateroute";
 import Test from "./Component/Test";
 import Signup from "./Component/Sign";
 import Login from "./Component/Login";
 import Userdetail from "./Component/userdetail";
+import Read from "./Pages/Read";
+import Update from "./Pages/Update";
 
 function App() {
-// const [ram, setRam] = useState(false);
 
-// const login = () =>{
-//   setRam(true);
-// }
-// const logout = () =>{
-//   setRam(false);
-// }
   return (
     <>
-    
     <BrowserRouter>
       <Header/>
     
@@ -35,9 +27,9 @@ function App() {
           <Route  path="/signup"  element={<Signup/>}/>
           <Route  path="/login"  element={<Login  />}/>
           <Route  path="/userdetail"  element={<Userdetail/>}/>
-          <Route  path="/create"  element={<Create  />}/>
-          
-       
+          <Route  path="/create"  element={<Create />}/>
+          <Route  path="/read"  element={<Read />}/>
+          <Route exact path="/edit/:id"  element={<Update />}/>
         </Routes>
     
       <Foot />

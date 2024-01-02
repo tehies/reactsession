@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import "./navbar.css";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -9,6 +10,8 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
+   
+  const allUser = useSelector((state) => state.app.user);
 
   return (
     <nav className="navbar">
@@ -22,12 +25,12 @@ const Navbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/about">About</Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to="/contact">Contact</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/userdetail">Userdetail</Link>
             </li>
@@ -36,6 +39,9 @@ const Navbar = () => {
             </li>
             <li>
             <Link to="/create">Create</Link>
+            </li>
+            <li>
+            <Link to="/read">Read ({allUser.length})</Link>
             </li>
             <Link to="/login"><button className="header-button" >Log in</button></Link>
           </ul>
