@@ -4,18 +4,19 @@ import { useParams } from 'react-router-dom';
 
 const Update = () => {
 const {id} = useParams();
+
 const [updatedata, setUpdatedata] = useState();
 
 const {user, loading} = useSelector((state) => state.app.user);
 
 
-useEffect(()=>{
-    if(id){
-        const singleUser = user.filter((ele) => ele.id === id);
-        setUpdatedata(singleUser);
-
-    }
-},[])
+// useEffect(()=> {
+//     if(id){
+//         const singleUser = user.filter((ele) => ele.id === id);
+//         setUpdatedata(singleUser);
+//     }
+// }, []);
+console.log(updatedata);
 
   return (
     <div>

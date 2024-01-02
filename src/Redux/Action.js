@@ -5,7 +5,7 @@ export const createUser = createAsyncThunk("createUser",
  async (data, { rejectWithValue }) => {
   const response = await fetch("https://658ea1b12871a9866e7980e5.mockapi.io/crud", {
     method: "POST",
-    headers: {  // <-- Fix the typo here
+    headers: {  
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
