@@ -34,7 +34,9 @@ if(loading){
     <p>{ele.age}</p>
     <p>{ele.gender}</p>
     <button className="btn btn-primary ms-3" onClick={() => [setId(ele.id), setShowpop(true)]}>View</button>
+
     <Link to={`/edit/${ele.id}`} className="btn btn-primary ms-3">Edit</Link>
+    
     <Link onClick={() => dispatch(deleteUser(ele.id))} className="btn btn-primary ms-3">Delete</Link>
   </div>
 </div>
